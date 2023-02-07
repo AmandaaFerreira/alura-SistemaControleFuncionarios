@@ -9,6 +9,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name= "cargos")
 public class Cargo {
+	@Override
+	public String toString() {
+		return "Cargo [id=" + id + ", descricao=" + descricao + "]";
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
